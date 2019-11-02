@@ -1,9 +1,8 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
-  provider: gke
-  zone: ""
+  clusterName: "terraform-eks-demo"
+  environmentGitOwner: "myorg"
+  provider: eks
+terraform: true
 gitops: true
 environments:
 - key: dev
@@ -17,7 +16,7 @@ ingress:
     enabled: false
     production: false
 kaniko: true
-secretStorage: local
+secretStorage: vault
 storage:
   logs:
     enabled: false
